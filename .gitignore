@@ -1,0 +1,12 @@
+# env files
+.env
+env
+
+# Ignore directiories
+/input
+/output
+/scripts/data_exploring
+
+# Ignore Python cache files
+__pycache__/
+*.pyc

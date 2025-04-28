@@ -39,17 +39,13 @@ def list_dir_files(path):
         - path = Directory path.
     """
     try:
-        list_files = os.listdir(path)
-        print(list_files)
-        return list_files
+        list_fileDir = []
+        list_filesNames = os.listdir(path)
+        
+        for fileName in list_filesNames:
+            list_fileDir.append(f"{path}/{fileName}")
+
+        return list_filesNames, list_fileDir
     except FileNotFoundError:
         print(f"Error: The directory '{path}' does not exist.")
         return []
-    
-
-# cf = config_parser('.config')
-# files_path = cf['DIR_PATHS']['files']
-# files_list = list_dir_files(files_path)
-
-# print('files_path: ', files_path)
-# print('files_list: ', files_list)
