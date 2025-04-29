@@ -8,7 +8,12 @@ def read_csv(path):
     Params:
     - path = path of the file wanted.
     """
-    pass
+    try:
+        data = pd.read_csv(path)
+        return data
+    except Exception as e:
+        print("Error:", e)
+
 
 def concat_csv(list_fileDir):
     """
